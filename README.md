@@ -10,8 +10,19 @@ Good resource for setup at [Digital Ocean](https://www.digitalocean.com/communit
 5. Add to sudo group  
 `usermod -aG sudo tt`
 6. Change to user, make ssh dir  
-````
-su - tt
-mkdir ~/.ssh
-chmod 700 ~/.ssh
-````
+  ```
+  su - tt
+  mkdir ~/.ssh
+  chmod 700 ~/.ssh
+  vim ~/.ssh/authorized_keys
+  ``` 
+7. Paste public key
+8. `chmod 600 ~/.ssh/authorized_keys`
+9. Change ssh settings  
+`sudo vim /etc/ssh/sshd_config`  
+chage settings:  
+  ```
+  PasswordAuthentication no  
+  PermitRootLogin no
+  ```
+10. `sudo systemctl reload sshd`
