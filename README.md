@@ -26,3 +26,13 @@ chage settings:
   PermitRootLogin no
   ```
 10. `sudo systemctl reload sshd`
+
+
+#### Locale
+locale
+
+#### Compatibility with Putty and Tmux
+Check if panes show lines instead of qqqqqxxxxx  
+Check if arrow keys work on prompt  
+Check to see F1 - F4 work (e.g. on htop)  
+Check to see if I can type Japanese directly into the terminal  
